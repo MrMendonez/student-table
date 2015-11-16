@@ -3,6 +3,7 @@
 <head>
   <title>Student Table</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
   <main class="container">
@@ -10,21 +11,51 @@
       <div class="col-md-12">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
+            <h3 class="panel-title">Detention List</h3>
           </div>
           <div class="panel-body">
             <table class="table">
-              <tr>
+              <tr id="headerRow">
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email Address</th>
                 <th>Remove</th>
               </tr>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
+              <tr id="row1" class="visible infoRow">
+                <td>Zach</td>
+                <td>Morris</td>
+                <td>preppy@baysidehigh.edu</td>
+                <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
+              </tr>
+              <tr id="row2" class="visible infoRow">
+                <td>Screech</td>
+                <td>Powers</td>
+                <td>screech@baysidehigh.edu</td>
+                <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
+              </tr>
+              <tr id="row3" class="visible infoRow">
+                <td>AC</td>
+                <td>Slater</td>
+                <td>muscles@baysidehigh.edu</td>
+                <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
+              </tr>
+              <tr id="row4" class="visible infoRow">
+                <td>Kelly</td>
+                <td>Kapowski</td>
+                <td>cheerleader@baysidehigh.edu</td>
+                <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
+              </tr>
+              <tr id="row5" class="visible infoRow">
+                <td>Jessie</td>
+                <td>Spano</td>
+                <td>jessiespano@baysidehigh.edu</td>
+                <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
+              </tr>
+              <tr id="row6" class="visible infoRow">
+                <td>Lisa</td>
+                <td>Turtle</td>
+                <td>lisaturtle@baysidehigh.edu</td>
+                <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
               </tr>
             </table>
           </div>
@@ -32,8 +63,8 @@
       </div>
     </div> <!-- end row -->
   </main>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
