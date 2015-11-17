@@ -22,7 +22,6 @@ add.addEventListener("click", rowAdd);
 
 // Function to add row
 function rowAdd() {
-
   var firstName = document.getElementById("firstName").value;
   var lastName = document.getElementById("lastName").value;
   var email = document.getElementById("email").value;
@@ -37,5 +36,5 @@ function rowAdd() {
   for (i = 0; i < hide.length; i++) {
     hide[i].addEventListener("click", rowRemove); 
   };
-}
+};
 
