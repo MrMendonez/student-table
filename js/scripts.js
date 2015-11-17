@@ -14,7 +14,7 @@ for (i = 0; i < hide.length; i++) {
 
 // Function to remove row
 function rowRemove() {
-  this.parentNode.parentNode.setAttribute("class", "hidden infoRow");
+  this.parentNode.parentNode.remove();
 };
 
 // Eventlistener for add button
