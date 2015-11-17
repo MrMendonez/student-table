@@ -3,17 +3,25 @@
 // Variables
 var i;
 var rowIndex;
-var hide = document.getElementsByClassName('infoRow');
+var hide = document.getElementsByClassName('removeButton');
+var add = document.getElementById('addButton');
 
-// EventListener
-for(i = 0; i < hide.length; i++) {
+
+// Eventlistener for remove button
+for (i = 0; i < hide.length; i++) {
   hide[i].addEventListener("click", rowRemove); 
 };
 
-// Functions
+// Function to remove row
 function rowRemove() {
-  for (var i = 0; i < hide.length; i++) {
-    this.setAttribute("class", "hidden infoRow");
-  }
+  this.parentNode.parentNode.setAttribute("class", "hidden infoRow");
 };
 
+// Eventlistener for add button
+add.addEventListener("click", rowAdd);
+
+//Function to add row
+function rowAdd() {
+  console.log('this');
+
+}
