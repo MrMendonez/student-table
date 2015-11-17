@@ -20,8 +20,7 @@ function rowRemove() {
 // Eventlistener for add button
 add.addEventListener("click", rowAdd);
 
-//Function to add row
+// Function to add row
 function rowAdd() {
   console.log('this');
-
 }
