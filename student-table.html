@@ -11,72 +11,78 @@
       <div class="col-md-12">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Detention List</h3>
+            <h3 class="panel-title">Bayside High School Detention List</h3>
           </div>
           <div class="panel-body">
-            <table class="table">
-              <tbody>
+            <table class="table table-striped">
+              <thead>
                 <tr id="headerRow">
                   <th>First Name</th>
                   <th>Last Name</th>
                   <th>Email Address</th>
                   <th>Remove</th>
                 </tr>
-                <tr class="visible infoRow" data-visible="true">
+              </thead>
+              <tbody>
+                <tr>
                   <td>Zach</td>
                   <td>Morris</td>
                   <td>preppy@baysidehigh.edu</td>
                   <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
                 </tr>
-                <tr class="visible infoRow" data-visible="true">
+                <tr>
                   <td>Screech</td>
                   <td>Powers</td>
                   <td>screech@baysidehigh.edu</td>
                   <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
                 </tr>
-                <tr class="visible infoRow" data-visible="true">
+                <tr>
                   <td>AC</td>
                   <td>Slater</td>
                   <td>muscles@baysidehigh.edu</td>
                   <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
                 </tr>
-                <tr class="visible infoRow" data-visible="true">
+                <tr>
                   <td>Kelly</td>
                   <td>Kapowski</td>
                   <td>cheerleader@baysidehigh.edu</td>
                   <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
                 </tr>
-                <tr class="visible infoRow" data-visible="true">
+                <tr>
                   <td>Jessie</td>
                   <td>Spano</td>
                   <td>jessiespano@baysidehigh.edu</td>
                   <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
                 </tr>
-                <tr class="visible infoRow" data-visible="true">
+                <tr>
                   <td>Lisa</td>
                   <td>Turtle</td>
                   <td>lisaturtle@baysidehigh.edu</td>
                   <td><button type="button" class="btn btn-danger removeButton"><i class="fa fa-times"></i></button></td>
                 </tr>
-                <tr>
-                  <td>
-                    <div class="form-group">
-                      <input type="name" class="form-control" id="firstName" placeholder="First Name">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="name" class="form-control" id="lastName" placeholder="Last Name">
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group">
-                      <input type="email" class="form-control" id="email" placeholder="Email">
-                    </div>
-                  </td>
-                  <td><button type="button" class="btn btn-success" id="addButton"><i class="fa fa-plus"></i></button></td>
-                </tr>
               </tbody>
+              <tfoot>
+                <tr>
+                  <form id="form">
+                    <td>
+                      <div class="form-group">
+                        <input type="name" class="form-control" id="firstName" placeholder="First Name">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="name" class="form-control" id="lastName" placeholder="Last Name">
+                      </div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                      </div>
+                    </td>
+                    <td><button type="button" class="btn btn-success" id="addButton"><i class="fa fa-plus"></i></button></td>
+                  </form>
+                </tr>
+              </tfoot>
             </table>
           </div>
         </div> <!-- panel panel-default -->
