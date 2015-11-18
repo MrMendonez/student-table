@@ -30,11 +30,22 @@ function rowAdd() {
   var inputsArray = [];
   var elementText;
   var firstNamesList = document.getElementsByClassName("first");
+  if (firstNamesList.constructor === Array) {
+    console.log("firstNamesList is an Array");
+  } else {
+    console.log("firstNamesList is not an Array");
+  };
+  for (i = 0; i < firstNamesList.length; i++) {
+    firstNamesList = firstNamesList.innerHTML;
+    console.log("firstNamesList Values: " + firstNamesList);
+  };
+
+
   console.log(firstNamesList);
   // Check for empty text fields
   if ((firstName === "") || (lastName === "") || (email === "")) {
     inputsArray = document.getElementsByTagName("input");
-    for (var i = 0; i < inputsArray.length; i++) {
+    for (i = 0; i < inputsArray.length; i++) {
       if (inputsArray[i].value === "") {
         switch(i) {
           case 0:
@@ -51,31 +62,31 @@ function rowAdd() {
         }
         alert("You have an empty input in the " + elementText + " input");
         break;
+        // } else if ((firstName === firstNamesList[i]) && (lastName === lastNamesList[i]) && (e-mail === emailsList[i]) { // check for duplicate entries
+        
+
+
+
+
+
+
+      } else { // add HTML for each new row
+      newRowEl.setAttribute("class", "visible inflow");
+      newRowEl.setAttribute("data-visible", "true");
+      newRowEl.innerHTML = "<td>" + firstName + "</td> \
+                      <td>" + lastName + "</td> \
+                      <td>" + email + "</td> \
+                      <td><button type='button' class='btn btn-danger \ removeButton'><i class='fa fa-times'></i></button></td>";
+      table.appendChild(newRowEl);
+      // Set Eventlisteners to listen to new buttons from added rows
+      add.addEventListener("click", rowAdd);  
+      for (i = 0; i < hide.length; i++) {
+        hide[i].addEventListener("click", rowRemove); 
+      };
+      // Reset form fields back to place-holders
+      var form = document.getElementById("form");
+      form.reset();
       }
-    } 
-  // else if () { // check for duplicate entries
-    
-
-
-
-
-
-
-  } else { // add HTML for each new row
-  newRowEl.setAttribute("class", "visible inflow");
-  newRowEl.setAttribute("data-visible", "true");
-  newRowEl.innerHTML = "<td>" + firstName + "</td> \
-                  <td>" + lastName + "</td> \
-                  <td>" + email + "</td> \
-                  <td><button type='button' class='btn btn-danger \ removeButton'><i class='fa fa-times'></i></button></td>";
-  table.appendChild(newRowEl);
-  // Set Eventlisteners to listen to new buttons from added rows
-  add.addEventListener("click", rowAdd);  
-  for (i = 0; i < hide.length; i++) {
-    hide[i].addEventListener("click", rowRemove); 
-  };
-  // Reset form fields back to place-holders
-  var form = document.getElementById("form");
-  form.reset();
+    }
   }
 };
