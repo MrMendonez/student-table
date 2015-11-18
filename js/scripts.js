@@ -29,11 +29,13 @@ function rowAdd() {
   var newRowEl = document.createElement("tr");
   var inputsArray = [];
   var elementText;
+  var firstNamesList = document.getElementsByClassName("first");
+  console.log(firstNamesList);
   // Check for empty text fields
   if ((firstName === "") || (lastName === "") || (email === "")) {
     inputsArray = document.getElementsByTagName("input");
     for (var i = 0; i < inputsArray.length; i++) {
-      if(inputsArray[i].value === "") {
+      if (inputsArray[i].value === "") {
         switch(i) {
           case 0:
             elementText = "first";
@@ -51,6 +53,14 @@ function rowAdd() {
         break;
       }
     } 
+  // else if () { // check for duplicate entries
+    
+
+
+
+
+
+
   } else { // add HTML for each new row
   newRowEl.setAttribute("class", "visible inflow");
   newRowEl.setAttribute("data-visible", "true");
