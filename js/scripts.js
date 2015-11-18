@@ -27,7 +27,31 @@ function rowAdd() {
   var email = document.getElementById("email").value;
   var table = document.getElementsByTagName("tbody")[0];
   var newRowEl = document.createElement("tr");
-  // add HTML for each new row
+  var inputsArray = [];
+  var elementText;
+  // Check for empty text fields
+  if ((firstName === "") || (lastName === "") || (email === "")) {
+    inputsArray = document.getElementsByTagName("input");
+    for (var i = 0; i < inputsArray.length; i++) {
+      if(inputsArray[i].value === "") {
+        switch(i) {
+          case 0:
+            elementText = "first";
+            break;
+
+          case 1:
+            elementText = "second";
+            break;
+
+          case 2:
+            elementText = "third";
+            break;
+        }
+        alert("You have an empty input in the " + elementText + " input");
+        break;
+      }
+    } 
+  } else { // add HTML for each new row
   newRowEl.setAttribute("class", "visible inflow");
   newRowEl.setAttribute("data-visible", "true");
   newRowEl.innerHTML = "<td>" + firstName + "</td> \
@@ -43,5 +67,5 @@ function rowAdd() {
   // Reset form fields back to place-holders
   var form = document.getElementById("form");
   form.reset();
+  }
 };
-
